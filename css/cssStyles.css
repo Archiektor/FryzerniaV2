@@ -51,7 +51,7 @@
 .logo {
     display: inline-block;
     height: 8rem; /*changes*/
-    color: rgba(145, 87, 13, 0.82);
+    color: rgba(211, 137, 13, 0.65);
 }
 
 .fa-dungeon {
@@ -101,6 +101,16 @@
 
 .icons > .fab {
     padding-left: 8%;
+
+}
+
+.icons .fab:hover {
+    transform-origin: 100% 100%;
+    -webkit-transform: translate(2px, 2px);
+    -moz-transform: translate(2px, 2px);
+    -ms-transform: translate(2px, 2px);
+    -o-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
 }
 
 .fa-instagram {
@@ -132,7 +142,14 @@ li {
     display: inline-block;
     flex-basis: auto;
     /*flex-shrink ???*/
+}
 
+li:hover {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 .nav a:link {
@@ -147,7 +164,9 @@ li {
 
 .nav a:hover {
     background-color: rgba(255, 121, 177, 0.8);
+    line-height: 150%;
     text-decoration: underline;
+
 }
 
 .p-header {
@@ -321,8 +340,8 @@ li {
 .advantages {
     text-align: center;
     padding-bottom: 1.5rem;
-    background-color: #d3b1bf;
-    color: rgba(255, 245, 255, 0.84);
+    background-color: rgba(211, 177, 191, 0.53);
+    color: rgba(84, 74, 84, 0.84);
 }
 
 figure {
@@ -426,3 +445,21 @@ article p {
     font: 1.1rem 'Caveat', cursive;
 }
 
+.anima {
+    -webkit-animation: switch 2s linear 2;
+    -o-animation: switch 2s linear 2;
+    animation: switch 2s linear 2;
+}
+
+@keyframes switch {
+    from {
+        transform: scale(.75);
+        left: 90%;
+    }
+
+    to {
+        transform: scale(1.25);
+        left: 40%;
+        /*background-color: red;*/
+    }
+}

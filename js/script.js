@@ -7,8 +7,6 @@ document.getElementsByClassName("dropdown")[0].addEventListener('click', functio
 
     for (let i = 0; i < this.children.length; i++) {
         if (this.children[i].classList.contains("dropdown-selection")) {
-            // activeDropdown.id = this.id;
-            // activeDropdown.element = this.children[i];
             this.children[i].style.visibility = 'visible';
         }
     }
@@ -21,7 +19,6 @@ window.onclick = function (event) {
 
     if (!event.target.classList.contains("dropdown-button")) {
         document.getElementsByClassName("dropdown-selection")[0].style.visibility = "hidden";
-        // activeDropdown.element.style.visibility = 'hidden';
     }
 
 };
@@ -76,3 +73,31 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
     modal.style.display = "none";
 };
+
+// Dynamic animated buttons
+
+for (let i = 0; i < document.querySelectorAll(".animated").length; i++){
+    document.querySelectorAll(".animated")[i].addEventListener("mouseover", function () {
+
+        var currentDiv = this.className;
+
+        switch (currentDiv) {
+            case "link-btn1 animated":
+                document.getElementsByClassName("fas")[0].classList.add("anima");
+                break;
+            case "link-btn2 animated":
+                document.getElementsByClassName("fas")[1].classList.add("anima");
+                break;
+            case "link-btn3 animated":
+                document.getElementsByClassName("fas")[2].classList.add("anima");
+                console.log(document.getElementsByClassName("fas")[2].className);
+                break;
+            case "link-btn4 animated":
+                document.getElementsByClassName("fas")[3].classList.add("anima");
+                break;
+            default :
+                alert("Unknown error");
+        }
+
+    });
+}
