@@ -326,7 +326,7 @@
     .row-oriented {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.2fr;
         text-align: center;
     }
 
@@ -335,7 +335,15 @@
     }
 
     .copyright {
-        margin-top: 1rem;
+        text-align: center;
+        width: 100%;
     }
+
+
+    .button-up {
+        text-align: center;
+        width: 100%;
+    }
+
 
 }

@@ -437,12 +437,35 @@ article p {
 }
 
 .copyright {
-    position: absolute;
-    top: 93%;
-    left: 4px;
-    padding: 3px 0 3px 1rem;
     margin: 0;
-    font: 1.1rem 'Caveat', cursive;
+    justify-self: start;
+    align-self: center;
+    background-color: rgba(139, 129, 139, 0.41);
+    width: 100%;
+}
+
+.copyright p {
+    margin: 0 1rem;
+    width: 100%;
+    padding: 1.1rem .5rem;
+    font: 1rem/1.2 'Cormorant Garamond', serif;
+}
+
+.button-up {
+    margin: 0;
+    align-self: center;
+    justify-self: end;
+    background-color: rgba(139, 129, 139, 0.41);
+    /*border: 2px red solid;*/
+    width: 100%;
+    text-align: right;
+}
+
+.button-up button {
+    margin: 0 1rem;
+    padding: 0.55rem .55rem;
+    background-color: rgba(69, 59, 69, 0.21);
+    color: #cccccc;
 }
 
 .anima {
