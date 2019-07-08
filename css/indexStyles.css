@@ -51,7 +51,7 @@
 .logo {
     display: inline-block;
     height: 8rem; /*changes*/
-    color: rgba(211, 137, 13, 0.65);
+    color: rgba(247, 138, 55, 0.76)
 }
 
 .fa-dungeon {
@@ -486,4 +486,8 @@ article p {
         left: 40%;
         /*background-color: red;*/
     }
+}
+
+.fa-arrow-circle-up {
+    color: #cf72ff;
 }
