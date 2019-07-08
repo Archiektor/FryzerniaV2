@@ -396,7 +396,7 @@ article p {
 
 #footer {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: start;
     height: fit-content;
@@ -436,29 +436,31 @@ article p {
     border-left: rgba(255, 121, 177, 0.8) dotted 8px;
 }
 
+.bottom-footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column: span 4;
+    width: 100%;
+    margin-top: -1rem;
+}
+
 .copyright {
     margin: 0;
-    justify-self: start;
-    align-self: center;
-    background-color: rgba(139, 129, 139, 0.41);
-    width: 100%;
+    background-color: rgba(187, 177, 187, 0.75);
+    text-align: start;
 }
 
 .copyright p {
     margin: 0 1rem;
-    width: 100%;
     padding: 1.1rem .5rem;
     font: 1rem/1.2 'Cormorant Garamond', serif;
 }
 
 .button-up {
+    text-align: end;
     margin: 0;
-    align-self: center;
-    justify-self: end;
-    background-color: rgba(139, 129, 139, 0.41);
+    background-color: rgba(187, 177, 187, 0.75);
     /*border: 2px red solid;*/
-    width: 100%;
-    text-align: right;
 }
 
 .button-up button {
