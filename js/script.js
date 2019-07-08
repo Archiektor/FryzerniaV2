@@ -36,7 +36,6 @@ for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
             }
             counter--;
             imagePath = 'images/woman' + counter + '.jpg';
-            // console.log(imagePath);
             document.getElementsByTagName("header")[0].style.backgroundImage = "url(" + imagePath + ")";
         } else {
             if (counter === 2) {
@@ -44,7 +43,6 @@ for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
             }
             counter++;
             imagePath = 'images/woman' + counter + '.jpg';
-            // console.log(imagePath);
             document.getElementsByTagName("header")[0].style.backgroundImage = "url(" + imagePath + ")";
         }
 

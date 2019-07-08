@@ -266,7 +266,7 @@
     .dropdown-button {
         font-size: 1.0rem;
         padding: 3px 5px;
-        min-width: 100px;
+        min-width: 120px;
     }
 
     .dropdown ul {
@@ -291,7 +291,7 @@
     }
 
     .link-text {
-        margin: 55% auto 0;
+        margin: 45% auto 0;
         font: italic bold 1.3rem/1.6 'Cormorant Garamond', serif;
         max-width: 75%;
     }
