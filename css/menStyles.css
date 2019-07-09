@@ -1,0 +1,184 @@
+/*Body, HTML and Grid Creation*/
+body {
+    font: italic bold 1.2rem/1.6 'Cormorant Garamond', serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "header header header" "left left left" "right right right" "footer footer footer";
+    grid-template-columns: .5fr 2fr .5fr;
+    /*grid-template-rows: auto 1fr 1fr auto;*/
+    grid-gap: 4px;
+    /*text-shadow: 4px 8px 12px #000000;*/
+
+}
+
+/*Main Section Styles*/
+
+#header {
+    grid-area: header;
+    background-color: #bbb1bb;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+
+
+}
+
+#left-side {
+    position: relative;
+    grid-area: left;
+    background-color: #6df777;
+    height: fit-content;
+
+
+}
+
+#right-side {
+    grid-area: right;
+    background-color: #f7e467;
+    height: fit-content;
+
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #f775d6;
+
+}
+
+/*Tables Section*/
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 .6rem;
+    width: 100%;
+    border: 1px solid #ddd;
+    letter-spacing: .6px;
+
+}
+
+th {
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom: #cccccc 2px solid;
+    padding-bottom: 1rem;
+
+}
+
+td {
+    text-align: left;
+    padding: 2px;
+}
+
+.main-td {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+
+}
+
+.main-second-td {
+    margin-left: 3rem;
+    font-size: 1.2rem;
+}
+
+.bottom-td {
+    margin-left: 50%;
+}
+
+.bottom-second-td {
+    margin-left: 4rem;
+}
+
+
+.bottom {
+    font-size: .8rem;
+    border-bottom: #4a4a4a 2px solid;
+}
+
+/*tbody > tr:nth-child(odd) {*/
+/*    background-color: rgba(1, 1, 1, 0.48);*/
+/*}*/
+
+    /*Header Section*/
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+ul li {
+    display: inline-block;
+    flex-basis: auto;
+}
+
+ul li:hover {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+a:link {
+    background-color: rgba(255, 185, 66, 0.8);
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+    box-shadow: 5px 5px 6px #000000;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    background-color: rgba(255, 185, 66, 0.8);
+    line-height: 150%;
+    text-decoration: navy;
+    padding: 12px 16px;
+    font-size: 1.3rem;
+}
+
+/*Left-side Section*/
+
+[alt="man with styling haircut"] {
+    height: 50rem;
+    width: auto;
+    margin: 0 0 0 15%;
+    padding: 0;
+}
+
+.price-hair {
+    display: inline-block;
+    position: absolute;
+    top: 26%;
+    right: 20%;
+    width: 35rem;
+    height: auto;
+    background-color: rgba(229, 228, 216, 0.90);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+ol li {
+    letter-spacing: 1px;
+}
+
+/*Right-side Section*/
+
+[alt="man with styling beard"] {
+    height: 50rem;
+    width: auto;
+}
+
+.price-beard {
+    display: inline-block;
+    width: 35rem;
+    height: 44rem;
+    background-color: #fffbaf;
+}
