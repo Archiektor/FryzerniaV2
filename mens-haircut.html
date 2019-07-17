@@ -24,7 +24,7 @@
 
 <body>
 <div class="grid">
-    <div class="upper">
+    <div id="upper">
         <h2>Мужской зал</h2>
     </div>
     <div id="header">
@@ -33,7 +33,7 @@
             <li><a href="#">Женские стрижки</a></li>
             <!-- external file-->
             <li><a href="#">Примеры работ</a></li>
-            <li><a href="#">О нас</a></li>
+            <li><a href="#footer">О нас</a></li>
         </ul>
     </div>
 
@@ -238,7 +238,21 @@
             <span class="fab fa-vk fa-1x"></span>
         </div>
         <div class="column">
-            <span class="fas fa-map-marked-alt fa-3x"></span>
+            <!-- Trigger the Modal -->
+            <span id="myImg" class="fas fa-map-marked-alt fa-3x"></span>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img alt = '' class="modal-content" id="img01">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
         </div>
 
         <div class="bottom-footer">
@@ -246,7 +260,7 @@
                 <p>&copy; Copyright 2019, Nikki Odd</p>
             </div>
             <div class="button-up">
-                <button><a href="#header"><span class="fas fa-arrow-circle-up fa-1x"></span></a></button>
+                <button><a href="#upper"><span class="fas fa-arrow-circle-up fa-1x"></span></a></button>
             </div>
 
         </div>
@@ -255,5 +269,6 @@
 </div>
 
 <!--        script-->
+<script src="js/men-script.js"></script>
 </body>
 </html>
