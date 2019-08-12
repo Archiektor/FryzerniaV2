@@ -1,0 +1,178 @@
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    width: 1200px;
+    margin: 2% auto;
+}
+
+li {
+    position: relative;
+    width: 48%;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: width 400ms, left 400ms, right 400ms;
+}
+
+.img > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    transition: left 400ms, right 400ms, transform 400ms;
+}
+
+.img_before {
+    width: 60%;
+    transform: skewX(-10deg);
+    right: 49.9%;
+}
+
+.img_after {
+    width: 60%;
+    transform: skewX(-10deg);
+    left: 49.9%;
+}
+
+.img_before > * {
+    left: 15%;
+    transform: skewX(10deg);
+}
+
+.img_after > * {
+    right: 15%;
+    transform: skewX(10deg);
+}
+
+.content {
+    position: absolute;
+    color: #0f0f0f;
+    z-index: 1;
+    text-transform: uppercase;
+    font-family: 'Open Sans', serif;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.content_before {
+    top: 15px;
+    left: 18px;
+}
+
+.content_after {
+    bottom: 15px;
+    right: 18px;
+}
+
+/* focus and unfocus*/
+.focus {
+    width: 80%;
+    transform: scale(1.1);
+}
+
+.img_before {
+    transform: skewX(-10deg);
+}
+
+.img_after {
+    transform: skewX(-10deg);
+}
+
+.img_before > * {
+    transform: skewX(10deg);
+}
+
+.img_after > * {
+    transform: skewX(10deg);
+}
+
+/*.foc_single {*/
+/*    width: 100%;*/
+/*    transform: scale(1.3);*/
+/*}*/
+
+/*.foc_before {*/
+/*    transform: skewX(-10deg);*/
+/*    right: 69.9%;*/
+/*}*/
+
+/*.foc_after {*/
+/*    transform: skewX(-10deg);*/
+/*    left: 69.9%;*/
+/*}*/
+
+/*.foc_before > * {*/
+/*    transform: skewX(10deg);*/
+/*    left: 12%;*/
+/*}*/
+
+/*.foc_after > * {*/
+/*    transform: skewX(10deg);*/
+/*    right: 12%;*/
+/*}*/
+
+.unfocus {
+    width: 50%;
+}
+
+/*.unfoc_before {*/
+/*    transform: skewX(-10deg);*/
+/*    right: 69.9%;*/
+/*}*/
+
+/*.unfoc_after {*/
+/*    transform: skewX(-10deg);*/
+/*    left: 69.9%;*/
+/*}*/
+
+/*.unfoc_before > * {*/
+/*    transform: skewX(10deg);*/
+/*    left: 20%;*/
+/*}*/
+
+/*.unfoc_after > * {*/
+/*    transform: skewX(10deg);*/
+/*    right: 20%;*/
+/*}*/
+
+
+/*Images Paths*/
+
+.img_bg_1 {
+    background-image: url("../images/woman0.jpg");
+}
+
+.img_bg_2 {
+    background-image: url("../images/woman1.jpg");
+}
+
+.img_bg_3 {
+    background-image: url("../images/men1.jpg");
+}
+
+.img_bg_4 {
+    background-image: url("../images/men2.jpg");
+}
+
+.img_bg_5 {
+    background-image: url("../images/woman3.jpg");
+}
+
+.img_bg_6 {
+    background-image: url("../images/woman4.jpg");
+}

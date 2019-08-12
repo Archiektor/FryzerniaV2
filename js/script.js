@@ -25,6 +25,8 @@ window.onclick = function (event) {
 
 // Carousel Pure JavaScript
 
+
+// for more images use arr with condition firstIndex/ lastIndex
 for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
 
 
@@ -35,34 +37,48 @@ for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
                 counter = 3;
             }
             counter--;
-            imagePath = 'images/woman' + counter + '.jpg';
-            document.getElementsByTagName("header")[0].style.backgroundImage = "url(" + imagePath + ")";
+            setImagePath(counter);
         } else {
             if (counter === 2) {
                 counter = -1;
             }
             counter++;
-            imagePath = 'images/woman' + counter + '.jpg';
-            document.getElementsByTagName("header")[0].style.backgroundImage = "url(" + imagePath + ")";
+            setImagePath(counter);
         }
 
     })
 
 }
 
+function setImagePath(counter) {
+    imagePath = 'images/woman' + counter + '.jpg';
+    document.getElementsByTagName("header")[0].style.backgroundImage = "url(" + imagePath + ")";
+}
+
 // Expandable Image Pure JS
 
 var modal = document.getElementById("myModal");
-
 var img = document.querySelector(".map-image");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
+var screenWidth = window.innerWidth;
 
-img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-};
+makeMapExpandeble(screenWidth);
+
+window.addEventListener('resize', function () {
+    let newScreenWidth = window.innerWidth;
+    makeMapExpandeble(newScreenWidth);
+});
+
+function makeMapExpandeble(width) {
+    if (width < 1200) {
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        };
+    }
+}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -74,7 +90,7 @@ span.onclick = function () {
 
 // Dynamic animated buttons
 
-for (let i = 0; i < document.querySelectorAll(".animated").length; i++){
+for (let i = 0; i < document.querySelectorAll(".animated").length; i++) {
     document.querySelectorAll(".animated")[i].addEventListener("mouseover", function () {
 
         var currentDiv = this.className;
@@ -88,7 +104,6 @@ for (let i = 0; i < document.querySelectorAll(".animated").length; i++){
                 break;
             case "link-btn3 animated":
                 document.getElementsByClassName("fas")[2].classList.add("anima");
-                console.log(document.getElementsByClassName("fas")[2].className);
                 break;
             case "link-btn4 animated":
                 document.getElementsByClassName("fas")[3].classList.add("anima");
